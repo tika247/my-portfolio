@@ -1,0 +1,71 @@
+<div class="works fn-tab-panel">
+<h2 class="tab__hdg">WORKS</h2>
+<p class="tab__lead">My representative works, ranging various type of development</p>
+<ul class="works__list">
+<% Object.entries(api.works).forEach((item, i)=> { %><li class="works__item">
+<div class="works__btn" role="button" tabindex="1">
+<h3 class="works__name"><%- item[0] %></h3>
+<div class="works__img">
+<img src="<%- imgPath %>works/0<%= i + 1 %>/img.jpg" alt="" width="464" height="354">
+<div class="works__layer"><span>detail</span></div>
+</div>
+</div>
+<dialog class="works-dialog js-dialog fn-dialog-anim">
+<div class="works-dialog__content">
+<button type="button" class="works-dialog__close fn-dialog-close"><span>Close</span></button>
+<h2 class="works-dialog__title"><%- item[0] %></h2>
+<table class="works-dialog__table">
+<tbody>
+<% Object.entries(item[1].detail).forEach((detail, i)=> { %><tr>
+<th><%- detail[0] %></th>
+<td><% if(detail[0] === 'LINK') { %>
+<% if(Array.isArray(detail[1])) { %>
+<% for(linkText of detail[1][0]) {%>
+<a href="<%- linkText %>" target="_blank"><%- linkText %></a>
+<% } %>
+<% if(detail[1][1]) { %>
+<p><small>*<%- detail[1][1] %></small></p>
+<% } %>
+<% } else { %>
+<%- detail[1] %>
+<% } %> 
+<% } else if (detail[0] === 'Note') {%><% for(note of detail[1]) {%><p><%- note %></p><% } %><% } else {%><%- detail[1] %>
+<% } %></td>
+</tr><% }) %>
+</tbody>
+</table>
+<% const srcText = item[1].srcText;
+const isMovie = item[1].srcType === 'movie';
+const isDesktop = item[1].srcType === 'desktop'; %>
+<div class="works-dialog__srcArea<% if(isMovie) { %> is-movie<% } %><% if(isDesktop) { %> is-desktop<% } %>">
+<% for(index in srcText) {%>
+<% const j = Number(index); %>
+<div class="works-dialog__src">
+<span><%= srcText[j] %></span>
+<% if(isMovie) { %>
+<video controls><source src="<%- imgPath %>works/0<%= i + 1 %>/movie-0<%= j + 1 %>.mp4" type="video/mp4"></video>
+<% } else { %>
+<img src="<%- imgPath %>works/0<%= i + 1 %>/capcha-0<%= j + 1 %>.jpg" alt="">
+<% } %>
+</div>
+<% } %>
+<% if(isDesktop) { %>
+<div class="works-dialog__src">
+<span>Movie</span>
+<small>* only captured App screen itself, but actually some popups, such as about error messages, is being shown up</small>
+<video controls><source src="<%- imgPath %>works/0<%= i + 1 %>/movie.mp4" type="video/mp4"></video>
+</div>
+<% } %>
+</div>
+<div class="works-dialog__closeWrap">
+<button type="button" class="works-dialog__close2 fn-dialog-close"><span>Close</span></button>
+</div>
+</div>
+</dialog>
+</li><% }) %>
+</ul>
+
+<div class="works__moreWrap">
+<button class="works__more"><span>More</span></button>
+</div>
+</div>

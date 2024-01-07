@@ -1,0 +1,27 @@
+<div class="experience fn-tab-panel">
+<h2 class="tab__hdg">EXPERIENCE</h2>
+<p class="tab__lead">My experience related to Web Development</p>
+<ul class="experience__list">
+<% Object.entries(api.experience.main).forEach((item, i)=> { %><li class="experience__item">
+<div class="experience__textArea">
+<h3 class="experience__name"><%- item[0] %></h3>
+<span class="experience__time"><%- item[1].time %></span>
+<p class="experience__text"><%- item[1].text %></p>
+</div>
+<img src="<%- imgPath %>experience/icon-0<%- i + 1 %>.svg" alt="" width="240" height="240" class="experience__img">
+</li><% }) %>
+</ul>
+
+<p class="tab__lead">My experience irrelevant to the Web, but hugely influencing my current identity</p>
+<ul class="experience__list">
+<% Object.entries(api.experience.other).forEach((item, i)=> { %><li class="experience__item">
+<div class="experience__textArea">
+<h3 class="experience__name"><%- item[0] %></h3>
+<span class="experience__time"><%- item[1].time %></span>
+<p class="experience__text"><%- item[1].text %></p>
+</div>
+<% const mainLength = Object.keys(api.experience.main).length %>
+<img src="<%- imgPath %>experience/icon-0<%- mainLength + i + 1 %>.svg" alt="" width="240" height="240" class="experience__img">
+</li><% }) %>
+</ul>
+</div>

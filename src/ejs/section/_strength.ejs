@@ -1,0 +1,38 @@
+<div class="strength fn-tab-panel js-strength">
+<h2 class="tab__hdg">MY STRENGTH</h2>
+<p class="tab__lead fn-strength-title">My 6 core strength that makes valuable contribution and inspiring others</p>
+<div class="strength__content">
+<ul class="strength__list fn-strength-list">
+<li><button class="fn-strength-btn">COMMUNICATIVE</button></li>
+<li><button class="fn-strength-btn">CONSIDERATION</button></li>
+<li><button class="fn-strength-btn">Growth-Mindset</button></li>
+<li><button class="fn-strength-btn">DETAIL-ORIENTED</button></li>
+<li><button class="fn-strength-btn">STUDIOUS</button></li>
+<li><button class="fn-strength-btn">ADAPTABILITY</button></li>
+</ul>
+
+<% Object.entries(api.strength).forEach((item, i)=> { %>
+<div class="strength__detail fn-strength-panel">
+<div class="strength__nameArea">
+<h3 class="strength__name"><%- item[0] %></h3>
+<img src="<%- imgPath %>strength/icon-0<%- i + 1 %>.svg" alt="" class="strength__img" width="160" height="160">
+</div>
+<div class="strength__textArea">
+<% for(data of item[1]) { %>
+<% if(typeof data === 'string') { %>
+<p class="strength__text"><%- data %></p>
+<% } else if(Array.isArray(data)) { %>
+<dl class="strength__desc">
+<% for(point of data) { %>
+<dt><%- point[0] %></dt>
+<dd><%- point[1] %></dd>
+<% } %>
+</dl>
+<% } %>
+<% } %>
+</div>
+</div>
+<% }) %>
+
+</div>
+</div>

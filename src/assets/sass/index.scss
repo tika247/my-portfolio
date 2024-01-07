@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@use "foundation/base/_init";
+@use "foundation/base/_reset";
+@use "foundation/base/_mixin";
+@use "foundation/base/_prop" as prop;
+@use "utility/_utility" as util;
+
+@use "modules/_footer";
+@use "modules/_mv";
+@use "modules/_scroll";
+@use "modules/_tab";
+@use "modules/_profile";
+@use "modules/_works";
+@use "modules/_skill";
+@use "modules/_experience";
+@use "modules/_strength";
+
+body {
+    background-image: url('/assets/img/bg.png');
+    background-repeat: repeat;
+}

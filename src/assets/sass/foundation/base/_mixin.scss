@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@use "_prop" as *;
+
+@mixin sp {
+  @media screen and (max-width: $bp*1px) {
+    @content;
+  }
+}
+
+@mixin pc {
+
+  @media print,
+  screen and (min-width: $bp+1px) {
+    @content;
+  }
+}
+
+@mixin pc-wide {
+
+  @media print,
+  screen and (min-width: $layout) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @include pc {
+
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}

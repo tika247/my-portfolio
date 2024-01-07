@@ -1,0 +1,36 @@
+<% meta = {
+pageTitle:'My Portfolio',
+description:'My Portfolio',
+url:'http://www.example.com/',
+noindex:false
+};
+imgPath = '/assets/img/'
+%>
+<%- include('./common/_meta'); %>
+<body>
+<main>
+<%- include('./section/_mv'); %>
+<div class="scroll">SCROLL</div>
+<div class="tab js-tab">
+<div class="tab__inner">
+<div class="tab__wrap">
+<em class="tab__title fn-tab-title">Choose my feature</em>
+<div role="tablist" class="tab__btnList fn-tab-list">
+<% const btns = ['Profile', 'Skill', 'Experience', 'Works', 'My Strength']; %>
+<% for(let i=0; i<btns.length; i++) {%><button type="button" class="tab__btn fn-tab-btn"><span><%= btns[i] %></span></button><% } %>
+</div>
+</div>
+
+<div class="tab__content">
+<%- include('./section/_profile'); %>
+<%- include('./section/_skill'); %>
+<%- include('./section/_experience'); %>
+<%- include('./section/_works'); %>
+<%- include('./section/_strength'); %>
+</div>
+</div>
+</div>
+</main>
+<%- include('./common/_footer'); %>
+</body>
+</html>

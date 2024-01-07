@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+// All required
+
+$bp: 768;
+
+$color-01: #010F27;
+$color-02: #2CDCBF;
+$color-03: #313131;
+$color-04: #5F5F5F;
+$color-05: #005465;
+$color-06: #193C46;
+$color-07: #BEF1FF;
+$shadow-01: rgba(94, 94, 94, .2);
+$shadow-02: rgba(94, 94, 94, .8);
+$shadow-03: rgba(0, 85, 102, .1);
+$shadow-04: #e4e4e4;
+$shadow-05: rgba(0, 84, 101, .8);
+$shadow-06: rgba(1, 15, 39, .7);
+$text-color: $color-04;
+
+$layout: 1200px;
+$inner: 900px;
+$gutter: 20px;
+
+$link-color: #333;
+$link-normal: #186cc2;
+$link-visited:#6e0672;
+
+$font-family: 'Open Sans',
+'Caveat',
+'Hiragino Kaku Gothic ProN',
+'Hiragino Kaku Gothic Pro',
+'Hiragino Maru Gothic ProN',
+'Hiragino Maru Gothic Pro',
+'Meiryo',
+'MS PGothic',
+Sans-Serif;

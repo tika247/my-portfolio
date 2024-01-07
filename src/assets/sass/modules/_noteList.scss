@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@use "../foundation/base/_prop" as *;
+@use "../foundation/base/_mixin" as *;
+
+%noteList {
+    >li {
+        position: relative;
+        padding-left: 12px;
+        font-size: 1.2rem;
+
+        &::before {
+            position: absolute;
+            content: "*";
+            top: 0;
+            left: 0;
+        }
+
+        @include pc {
+            font-size: 1.4rem;
+        }
+    }
+}

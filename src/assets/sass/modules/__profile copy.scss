@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+@use "../foundation/base/_prop" as *;
+@use "../foundation/base/_mixin" as *;
+
+:is(.profile, .profile__textArea)>*:last-child {
+    margin-bottom: 0;
+}
+
+.profile {
+    $edge: 18px;
+
+    display: none;
+    position: relative;
+    padding: 0 $gutter;
+
+    @include pc {
+        margin-bottom: 200px;
+    }
+
+    @include pc-wide {
+        margin-bottom: 0;
+    }
+
+    &.is-show {
+        display: block;
+    }
+
+    &::before {
+        @include pc {
+            width: 240px;
+            height: 240px;
+            background-image: url('/assets/img/profile/deco-01.png');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: absolute;
+            content: "";
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: -640px;
+            z-index: 10;
+        }
+    }
+
+    &::after {
+        @include pc {
+            width: 240px;
+            height: 270px;
+            background-image: url('/assets/img/profile/deco-02.png');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: absolute;
+            content: "";
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: 560px;
+        }
+    }
+
+    &__inner {
+        width: min($layout + ($gutter * 2), 100%);
+        margin: 0 auto;
+        padding: 80px calc($gutter + $edge);
+
+        @include pc {
+            padding: 120px calc($gutter + $edge) 120px;
+
+        }
+    }
+
+    &__wrap {
+        width: min(800px, 100%);
+        position: relative;
+        filter: drop-shadow(0 0 1px $shadow-02);
+        background: repeating-linear-gradient(#fff, #fff 20px, $shadow-04 20.1px, $shadow-04 21px);
+
+        @include pc {
+            transform: rotate(-2deg);
+            margin: 0 auto;
+        }
+        
+        @include pc-wide {
+            margin: 0;
+        }
+
+        &::before,
+        &::after {
+            width: $edge;
+            height: 100%;
+            position: absolute;
+            content: "";
+            top: 0;
+            z-index: 1;
+        }
+
+        &::before {
+            background: url("/assets/img/profile/bg-01.svg") top right / auto 100% no-repeat;
+            left: -$edge + 1;
+        }
+
+        &::after {
+            background: url("/assets/img/profile/bg-02.svg") top left / auto 100% no-repeat;
+            right: -17px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding: 40px 16px 20px;
+        text-align: center;
+
+        @include pc {
+            padding: 56px 40px;
+            text-align: left;
+        }
+        
+        @include pc-wide {
+            padding-right: 96px;
+        }
+
+        &::before {
+            width: 138px;
+            height: 136px;
+            background: url("/assets/img/profile/deco-03.png") center / contain no-repeat;
+            position: absolute;
+            content: "";
+            top: -30px;
+            right: -30px;
+            z-index: 10;
+        }
+    }
+
+    &__lead {
+        display: block;
+        color: $color-01;
+        margin-bottom: 24px;
+        font-size: 1.8rem;
+
+        @include pc {
+            margin-bottom: 32px;
+            font-size: 2.4rem;
+        }
+    }
+
+    &__textArea {
+        margin-bottom: 16px;
+        text-align: left;
+
+        @include pc {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        line-height: 1.8;
+        margin-bottom: 8px;
+
+        @include pc {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__img {
+        display: inline-block;
+        text-align: center;
+        background-color: #fff;
+        filter: drop-shadow(0 0 1px $shadow-02);
+        padding: 8px;
+        z-index: 10;
+
+        @include pc {
+            position: absolute;
+            width: min(370px, 100%);
+            transform: translate(clamp(280px, 32vw,400px), 30px) rotate(6deg);
+        }
+
+        @include pc-wide {
+            bottom: 0;
+            left: 50%;
+            bottom: -32px;
+            transform: translateX(-50%) rotate(8deg);
+            margin-left: 530px;
+        }
+    }
+}

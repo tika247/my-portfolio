@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="248" height="244" viewBox="0 0 248 244">
+  <g id="icon-01" transform="translate(-404.5 -167.841)">
+    <g id="factory" transform="translate(408.5 167.841)">
+      <g id="lines" transform="translate(0 240)">
+        <line id="線_1" data-name="線 1" x2="42.354" fill="none" stroke="#2cdcbf" stroke-linecap="round" stroke-width="8"/>
+        <line id="線_2" data-name="線 2" x2="180.938" transform="translate(59.062)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="8"/>
+      </g>
+      <path id="house" d="M946.068,562.6v-91.26l84.221-30.069V419.28h25.153l11.206,59.246h50.972l4.968-31.244,17.688,18.592V562.6h-80.439V532.066H1026.79V562.6H946.068" transform="translate(-922.534 -334.404)" fill="#010f27"/>
+      <g id="squere" transform="translate(46.833 154.099)">
+        <rect id="長方形_1" data-name="長方形 1" width="14.195" height="13.649" rx="5" fill="#fff"/>
+        <rect id="長方形_2" data-name="長方形 2" width="14.195" height="13.649" rx="5" transform="translate(20.2)" fill="#fff"/>
+        <rect id="長方形_3" data-name="長方形 3" width="14.195" height="13.649" rx="5" transform="translate(0 18.562)" fill="#fff"/>
+        <rect id="長方形_4" data-name="長方形 4" width="14.195" height="13.649" rx="5" transform="translate(20.2 18.562)" fill="#fff"/>
+        <rect id="長方形_5" data-name="長方形 5" width="14.195" height="14.195" rx="5" transform="translate(0 37.125)" fill="#fff"/>
+        <rect id="長方形_6" data-name="長方形 6" width="14.195" height="14.195" rx="5" transform="translate(20.2 37.125)" fill="#fff"/>
+        <rect id="長方形_7" data-name="長方形 7" width="13.649" height="13.649" rx="5" transform="translate(57.871)" fill="#fff"/>
+        <rect id="長方形_8" data-name="長方形 8" width="13.649" height="13.649" rx="5" transform="translate(78.071)" fill="#fff"/>
+        <rect id="長方形_9" data-name="長方形 9" width="13.649" height="13.649" rx="5" transform="translate(57.871 18.562)" fill="#fff"/>
+        <rect id="長方形_10" data-name="長方形 10" width="13.649" height="13.649" rx="5" transform="translate(78.071 18.562)" fill="#fff"/>
+        <rect id="長方形_11" data-name="長方形 11" width="13.649" height="13.649" rx="5" transform="translate(115.742)" fill="#fff"/>
+        <rect id="長方形_12" data-name="長方形 12" width="13.649" height="13.649" rx="5" transform="translate(135.943)" fill="#fff"/>
+        <rect id="長方形_13" data-name="長方形 13" width="13.649" height="13.649" rx="5" transform="translate(115.742 18.562)" fill="#fff"/>
+        <rect id="長方形_14" data-name="長方形 14" width="13.649" height="13.649" rx="5" transform="translate(135.943 18.562)" fill="#fff"/>
+        <path id="長方形_15" data-name="長方形 15" d="M8,0H24.757a8,8,0,0,1,8,8V31.119a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8A8,8,0,0,1,8,0Z" transform="translate(57.871 43.13)" fill="#fff"/>
+      </g>
+      <path id="パス_2" data-name="パス 2" d="M1007,396.254l4.923-65.874h33.741l5.784,51.735L1007,396.254" transform="translate(-959.915 -277.857)" fill="#010f27"/>
+      <path id="パス_3" data-name="パス 3" d="M1022.389,297.264l.692-8.828H1053.8l.692,8.828h-32.109" transform="translate(-969.332 -251.266)" fill="#010f27" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <g id="smoke" transform="translate(60.969)">
+        <path id="パス_4" data-name="パス 4" d="M1042.88,239.477h20.944a6.014,6.014,0,0,1,3.808-5.279c3.722-1.385,3.721-9.607-1.991-11.6,0,0-2.943-2.077-9-1.991s-10.818,5.972-11.6,7.962-1.9,3.548-2.164,10.9" transform="translate(-1042.88 -209.793)" fill="#2cdcbf"/>
+        <ellipse id="楕円形_1" data-name="楕円形 1" cx="10.919" cy="10.646" rx="10.919" ry="10.646" transform="translate(21.984 6.551)" fill="#2cdcbf"/>
+        <circle id="楕円形_2" data-name="楕円形 2" cx="13.649" cy="13.649" r="13.649" transform="translate(39.454)" fill="#2cdcbf"/>
+      </g>
+    </g>
+    <g id="bevarage" transform="translate(543.705 215.5)">
+      <path id="パス_5" data-name="パス 5" d="M1373.939,213.266H1365l8.94,55.4h36.269l8.328-55.4h-31.215" transform="translate(-1358.123 -178.938)" fill="#010f27"/>
+      <path id="パス_6" data-name="パス 6" d="M1414.619,382.819l2.718,11.326h24.748l2.322-11.326" transform="translate(-1395.126 -305.38)" fill="none" stroke="#010f27" stroke-width="2"/>
+      <path id="パス_7" data-name="パス 7" d="M1465.006,117.192s2.515-15.826,4.291-19.646,8.9-10.514,18.648-19.293l2.736,2.931s-17.209,15.846-17.889,18.564-3.5,17.444-3.5,17.444h-4.291" transform="translate(-1432.702 -78.252)" fill="#2cdcbf"/>
+      <path id="パス_15" data-name="パス 15" d="M0,1.787H54.049V6.551H0Z" transform="translate(6.764 23.894)" fill="#010f27"/>
+      <circle id="楕円形_10" data-name="楕円形 10" cx="5" cy="5" r="5" transform="translate(23.27 50.538)" fill="#fff"/>
+      <path id="パス_13" data-name="パス 13" d="M4,0A4,4,0,1,1,0,4,4,4,0,0,1,4,0Z" transform="translate(39.27 60.538)" fill="#fff"/>
+      <circle id="楕円形_12" data-name="楕円形 12" cx="4" cy="4" r="4" transform="translate(29.27 72.538)" fill="#fff"/>
+      <path id="パス_10" data-name="パス 10" d="M2.787,0A2.787,2.787,0,1,1,0,2.787,2.787,2.787,0,0,1,2.787,0Z" transform="translate(17.353 63.964)" fill="#fff"/>
+      <path id="パス_11" data-name="パス 11" d="M2.69,0A2.69,2.69,0,1,1,0,2.69,2.69,2.69,0,0,1,2.69,0Z" transform="translate(15.663 42.468)" fill="#fff"/>
+      <path id="パス_12" data-name="パス 12" d="M2.69,0A2.69,2.69,0,1,1,0,2.69,2.69,2.69,0,0,1,2.69,0Z" transform="translate(42.37 45.158)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
