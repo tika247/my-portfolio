@@ -8,18 +8,51 @@
 }
 
 .footer {
-    background-image: url("/assets/img/footer/bg-01.png");
-    background-size: 100% 12px;
-    background-repeat: no-repeat;
-    background-position: left top;
+    position: relative;
+    background-image: url("/assets/img/footer/bg-01.svg");
+    background-repeat: repeat-x;
+    background-position: top center;
 
+    &::before {
+        width: 56px;
+        height: 56px;
+        background-image: url("/assets/img/footer/bg-02.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        content: "";
+        top: -32px;
+        left: 40px;
+        
     @include pc {
-        background-image: url("/assets/img/footer/bg-01-pc.png");
-        background-size: 100% 32px;
+        width: 80px;
+        height: 80px;
+        top: -48px;
+        left: 80px;
+    }
+    }
+
+    &::after {
+        width: 56px;
+        height: 56px;
+        background-image: url("/assets/img/footer/bg-03.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        content: "";
+        top: -40px;
+        right: 40px;
+
+        @include pc {
+            width: 80px;
+            height: 80px;
+            top: -48px;
+            right: 80px;
+        }
     }
 
     &__inner {
-        padding: 40px $gutter 8px;
+        padding: 48px $gutter 16px;
 
         @include pc {
             width: min($inner + $gutter * 2, 100%);

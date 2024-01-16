@@ -12,7 +12,7 @@
     &__inner {
         width: min($layout + $gutter * 2, 100%);
         margin: 0 auto;
-        padding: 80px $gutter 80px;
+        padding: 80px $gutter 120px;
 
         @include pc {
             padding: 80px $gutter 160px;
