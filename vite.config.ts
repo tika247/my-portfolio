@@ -7,9 +7,8 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
 
   return {
-    base: '/my-portfolio/',
+    base: isProduction ? '/my-portfolio/' : '',
     plugins: [react(), tailwindcss()],
-    publicDir: 'src',
     resolve: {
       alias: { '@': path.resolve(__dirname, 'client') },
     },
@@ -18,7 +17,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       outDir: 'dist',
-      emptyOutDir: true,
+      emptyOutDir: false,  // ← don't wipe dist before building
     },
   };
 });

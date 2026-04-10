@@ -1,24 +1,21 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const vite_1 = require("vite");
-const plugin_react_1 = __importDefault(require("@vitejs/plugin-react"));
-const vite_2 = __importDefault(require("@tailwindcss/vite"));
-const path_1 = __importDefault(require("path"));
-exports.default = (0, vite_1.defineConfig)({
-    plugins: [(0, plugin_react_1.default)(), (0, vite_2.default)()],
-    publicDir: 'src',
-    resolve: {
-        alias: { '@': path_1.default.resolve(__dirname, 'client') },
-    },
-    css: {
-        // Inline PostCSS config to prevent Vite from loading postcss.config.cjs from parent dirs
-        postcss: {},
-    },
-    build: {
-        outDir: 'dist',
-        emptyOutDir: true,
-    },
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
+export default defineConfig(({ mode }) => {
+    const isProduction = mode === 'production';
+    return {
+        base: isProduction ? '/my-portfolio/' : '',
+        plugins: [react(), tailwindcss()],
+        resolve: {
+            alias: { '@': path.resolve(__dirname, 'client') },
+        },
+        css: {
+            postcss: {},
+        },
+        build: {
+            outDir: 'dist',
+            emptyOutDir: false, // ← don't wipe dist before building
+        },
+    };
 });
