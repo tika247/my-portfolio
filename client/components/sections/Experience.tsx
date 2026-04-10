@@ -19,7 +19,7 @@ export function Experience() {
               <p className="experience__text">{entry.text}</p>
             </div>
             <img
-              src={`/assets/img/experience/icon-0${i + 1}.svg`}
+              src={`${import.meta.env.BASE_URL}assets/img/experience/icon-0${i + 1}.svg`}
               alt=""
               width={240}
               height={240}
@@ -42,7 +42,7 @@ export function Experience() {
               <p className="experience__text">{entry.text}</p>
             </div>
             <img
-              src={`/assets/img/experience/icon-0${mainLength + i + 1}.svg`}
+              src={`${import.meta.env.BASE_URL}assets/img/experience/icon-0${mainLength + i + 1}.svg`}
               alt=""
               width={240}
               height={240}

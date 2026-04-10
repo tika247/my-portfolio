@@ -16,7 +16,7 @@ export function Skill() {
           <li key={name}>
             <span>{name}</span>
             <img
-              src={`/assets/img/skill/img-${String(i + 1).padStart(2, '0')}.png`}
+              src={`${import.meta.env.BASE_URL}assets/img/skill/img-${String(i + 1).padStart(2, '0')}.png`}
               alt=""
               width={80}
               height={80}

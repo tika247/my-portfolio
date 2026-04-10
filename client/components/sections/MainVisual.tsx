@@ -12,7 +12,7 @@ export function MainVisual() {
           </p>
         </div>
         <img
-          src="/assets/img/mv/img-01.jpg"
+          src={`${import.meta.env.BASE_URL}assets/img/mv/img-01.jpg`}
           alt=""
           width={120}
           height={120}

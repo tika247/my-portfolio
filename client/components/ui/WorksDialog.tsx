@@ -14,10 +14,11 @@ export function WorksDialog({ title, entry, index }: Props) {
 
   const dialogId = `dialog-works-${index + 1}`;
 
+  const base = import.meta.env.BASE_URL;
   const hasImages = Array.isArray(entry.images) && entry.images.length > 0;
   const thumbnailSrc = hasImages
-    ? `${entry.imgPath}/${entry.images![0]}`
-    : `${entry.imgPath}/img.jpg`;
+    ? `${base}${entry.imgPath}/${entry.images![0]}`
+    : `${base}${entry.imgPath}/img.jpg`;
   const captureFiles = hasImages ? entry.images!.slice(1) : [];
 
   return (
@@ -125,12 +126,12 @@ export function WorksDialog({ title, entry, index }: Props) {
                 <span>{label}</span>
                 {isMovie ? (
                   <video controls>
-                    <source src={`${entry.imgPath}/movie-0${j + 1}.mp4`} type="video/mp4" />
+                    <source src={`${base}${entry.imgPath}/movie-0${j + 1}.mp4`} type="video/mp4" />
                   </video>
                 ) : hasImages ? (
-                  <img src={`${entry.imgPath}/${captureFiles[j] ?? entry.images![0]}`} alt="" />
+                  <img src={`${base}${entry.imgPath}/${captureFiles[j] ?? entry.images![0]}`} alt="" />
                 ) : (
-                  <img src={`${entry.imgPath}/capcha-0${j + 1}.jpg`} alt="" />
+                  <img src={`${base}${entry.imgPath}/capcha-0${j + 1}.jpg`} alt="" />
                 )}
               </div>
             ))}
@@ -142,7 +143,7 @@ export function WorksDialog({ title, entry, index }: Props) {
                   messages, is being shown up
                 </small>
                 <video controls>
-                  <source src={`${entry.imgPath}/movie.mp4`} type="video/mp4" />
+                  <source src={`${base}${entry.imgPath}/movie.mp4`} type="video/mp4" />
                 </video>
               </div>
             )}

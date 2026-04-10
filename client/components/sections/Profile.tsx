@@ -34,7 +34,7 @@ export function Profile() {
 
           <div className="profile__img">
             <img
-              src="/assets/img/profile/img-01.jpg"
+              src={`${import.meta.env.BASE_URL}assets/img/profile/img-01.jpg`}
               alt=""
               width={384}
               height={288}

@@ -45,7 +45,7 @@ export function Strength() {
             <div className="strength__nameArea">
               <h3 className="strength__name">{key}</h3>
               <img
-                src={`/assets/img/strength/icon-0${i + 1}.svg`}
+                src={`${import.meta.env.BASE_URL}assets/img/strength/icon-0${i + 1}.svg`}
                 alt=""
                 className="strength__img"
                 width={160}
