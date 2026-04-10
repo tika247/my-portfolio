@@ -1,4 +1,0 @@
-'src/**/*.scss':
-    - stylelint
-'src/**/*.ts':
-    - eslint
