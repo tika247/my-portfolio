@@ -4,7 +4,7 @@ import glob from 'glob';
 const tsFolderPath = 'src/assets/ts';
 const ignore = [`${tsFolderPath}/**/modules/*.ts`];
 const entryPoint = glob.sync(`${tsFolderPath}/**/*.ts`, {"ignore": ignore});
-const outDir = 'docs/assets/js';
+const outDir = 'dist/assets/js';
 const isWatch = [...process.argv].slice(2).some((item) => item === "--watch");
 
 // options

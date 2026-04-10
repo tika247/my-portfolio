@@ -14,7 +14,7 @@ export default defineConfig({
     postcss: {},
   },
   build: {
-    outDir: 'docs',
+    outDir: 'dist',
     emptyOutDir: true,
   },
 });

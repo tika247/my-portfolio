@@ -7,7 +7,7 @@
     "build": "tsc -p tsconfig.app.json --noEmit && vite build && tsc -p tsconfig.node.json",
     "build:client": "vite build",
     "build:server": "tsc -p tsconfig.node.json",
-    "start": "node client/server/docs/index.js",
+    "start": "node client/server/dist/index.js",
     "preview": "vite preview",
     "lint:ts": "eslint client/**/*.{ts,tsx}",
     "prepare": "husky"
