@@ -5,9 +5,7 @@ import path from 'path';
 
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
-
   return {
-    base: isProduction ? '/my-portfolio/' : '',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: { '@': path.resolve(__dirname, 'client') },

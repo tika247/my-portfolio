@@ -40,7 +40,7 @@ jobs:
       - name: Install & Build   # ← add this
         run: |
           npm install
-          npm run build
+          npm run build -- --base=/my-portfolio/
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
