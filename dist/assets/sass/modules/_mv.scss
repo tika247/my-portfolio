@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@use "../foundation/base/_prop" as *;
+@use "../foundation/base/_mixin" as *;
+
+:is(.mv-intro, .mv-intro__wrap)>*:last-child {
+    margin-bottom: 0;
+}
+
+.mv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/img/mv/bg-01.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    min-height: 100vh;
+
+    @include pc {
+        background-image: url("/assets/img/mv/bg-01-pc.svg");
+        background-size: auto 100%;
+        background-position: 50% top;
+        min-height: calc(100vh - 40px);
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 24px 0;
+        margin-bottom: 120px;
+
+        @include pc {
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrap {
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        color: $color-05;
+        margin-bottom: 12px;
+
+        @include pc {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__text {
+        >span {
+            color: $color-02;
+        }
+    }
+}

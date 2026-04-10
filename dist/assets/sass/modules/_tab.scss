@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@use "../foundation/base/_prop" as *;
+@use "../foundation/base/_mixin" as *;
+@use "./_btn";
+
+:is(.tab__inner, .strength__points, .strength__desc)>*:last-child {
+    margin-bottom: 0;
+}
+
+.tab {
+    &__inner {
+        width: min($layout + $gutter * 2, 100%);
+        margin: 0 auto;
+        padding: 80px $gutter 80px;
+
+        @include pc {
+            padding: 80px $gutter 160px;
+        }
+    }
+
+    &__hdg {
+        font-size: 4rem;
+        color: $color-03;
+        font-family: Caveat;
+        text-shadow: 2px 2px $shadow-01;
+        text-align: center;
+        margin-bottom: 16px;
+
+        @include pc {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__lead {
+        display: block;
+        font-size: 2.2rem;
+        font-family: Caveat;
+        font-weight: 500;
+        color: $color-05;
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include pc {
+            font-size: 2.6rem;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px clamp(24px, 10vw, 120px);
+        flex-wrap: wrap;
+        margin: 0 auto 120px;
+    }
+
+    &__title {
+        position: relative;
+        font-size: 1.8rem;
+        color: $color-05;
+        font-weight: 500;
+        font-family: Caveat;
+        font-size: 1.6rem;
+
+        @include pc {
+            font-size: 2.2rem;
+        }
+
+        &::before {
+            @include pc {
+                position: absolute;
+                content: "";
+                width: clamp(24px, 4vw, 64px);
+                height: .5px;
+                background-color: $shadow-05;
+                top: 50%;
+                right: clamp(-80px, -6vw, -40px);
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__btnList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px 40px;
+    }
+
+    &__btn {
+        @extend %btn;
+
+        &[aria-selected="true"] {
+            transform: scale(1.1);
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

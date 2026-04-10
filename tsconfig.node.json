@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "client/server/dist",
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "client/server/index.ts"]
+}

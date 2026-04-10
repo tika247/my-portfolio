@@ -1,0 +1,20 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  publicDir: 'src',
+  resolve: {
+    alias: { '@': path.resolve(__dirname, 'client') },
+  },
+  css: {
+    // Inline PostCSS config to prevent Vite from loading postcss.config.cjs from parent dirs
+    postcss: {},
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
+});

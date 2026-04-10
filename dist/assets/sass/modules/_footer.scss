@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@use "../foundation/base/_prop" as *;
+@use "../foundation/base/_mixin" as *;
+
+:is(.footer)>*:last-child {
+    margin-bottom: 0;
+}
+
+.footer {
+    background-image: url("/assets/img/footer/bg-01.png");
+    background-size: 100% 12px;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @include pc {
+        background-image: url("/assets/img/footer/bg-01-pc.png");
+        background-size: 100% 32px;
+    }
+
+    &__inner {
+        padding: 40px $gutter 8px;
+
+        @include pc {
+            width: min($inner + $gutter * 2, 100%);
+            margin: 0 auto;
+            padding: 64px $gutter 12px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 12px 24px;
+
+        >span {
+            font-size: 1.2rem;
+            color: $color-01;
+            font-weight: 500;
+
+            @include pc {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+}

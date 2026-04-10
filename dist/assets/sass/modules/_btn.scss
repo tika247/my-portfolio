@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@use "../foundation/base/_prop" as *;
+@use "../foundation/base/_mixin" as *;
+
+%btn {
+    position: relative;
+    min-width: 80px;
+    display: inline-block;
+    padding: 5px 16px;
+    border: 1px solid $color-05;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+
+    >span {
+        position: relative;
+        color: $color-05;
+        font-weight: bold;
+        font-family: Caveat;
+        white-space: nowrap;
+    }
+
+    &::before {
+        width: 100%;
+        height: 100%;
+        background: repeating-linear-gradient(45deg, rgba(43, 219, 190, .3), rgba(43, 219, 190, .3) 2px, transparent 2.1px, transparent 9px);
+        position: absolute;
+        content: "";
+        top: 4px;
+        left: 4px;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    @include hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
