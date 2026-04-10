@@ -3,19 +3,17 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
-export default defineConfig(({ mode }) => {
-  const isProduction = mode === 'production';
-  return {
-    plugins: [react(), tailwindcss()],
-    resolve: {
-      alias: { '@': path.resolve(__dirname, 'client') },
-    },
-    css: {
-      postcss: {},
-    },
-    build: {
-      outDir: 'dist',
-      emptyOutDir: false,  // ← don't wipe dist before building
-    },
-  };
+export default defineConfig({
+  base: process.env.VITE_BASE || '/',
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: { '@': path.resolve(__dirname, 'client') },
+  },
+  css: {
+    postcss: {},
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: false,
+  },
 });
