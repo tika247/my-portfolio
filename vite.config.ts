@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
 
   return {
-    base: isProduction ? '/my-portfolio/' : '',
+    base: '/my-portfolio/',
     plugins: [react(), tailwindcss()],
     publicDir: 'src',
     resolve: {
