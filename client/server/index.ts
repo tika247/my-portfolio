@@ -3,12 +3,12 @@ import path from 'path';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const distPath = path.resolve(__dirname, '../../dist');
+const docsPath = path.resolve(__dirname, '../../docs');
 
-app.use(express.static(distPath));
+app.use(express.static(docsPath));
 
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+  res.sendFile(path.join(docsPath, 'index.html'));
 });
 
 app.listen(PORT, () => {

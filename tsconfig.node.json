@@ -3,7 +3,7 @@
   "compilerOptions": {
     "module": "CommonJS",
     "moduleResolution": "node",
-    "outDir": "client/server/dist",
+    "outDir": "client/server/docs",
     "types": ["node"]
   },
   "include": ["vite.config.ts", "client/server/index.ts"]

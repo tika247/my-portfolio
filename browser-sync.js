@@ -3,7 +3,7 @@ import bs from 'browser-sync';
 
 const browser = bs.create();
 
-const base = 'dist';
+const base = 'docs';
 
 browser.init({
   files: [

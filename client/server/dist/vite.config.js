@@ -18,7 +18,7 @@ exports.default = (0, vite_1.defineConfig)({
         postcss: {},
     },
     build: {
-        outDir: 'dist',
+        outDir: 'docs',
         emptyOutDir: true,
     },
 });
